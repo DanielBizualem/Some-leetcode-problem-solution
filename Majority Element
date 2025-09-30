@@ -1,0 +1,9 @@
+def majority(nums):
+    store = {}
+    for i in range(len(nums)):
+        if nums[i] in store:
+            update = store[nums[i]]+1
+            store[nums[i]] = update
+        else:
+            store[nums[i]] = 1
+    return max(store,key=store.get)
