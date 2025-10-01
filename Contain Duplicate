@@ -1,0 +1,7 @@
+def containsDuplicate(self, nums: List[int]) -> bool:
+      store = {}
+      for i in range(len(nums)):
+          if nums[i] in store:
+              return True
+          store[nums[i]] = i
+      return False
